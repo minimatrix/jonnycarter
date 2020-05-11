@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./index.css";
+import {
+    MainContainer,
+    NavigationBar,
+    PageContainer
+} from "./components/layout";
+
+import { Frontpage } from "./pages";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const links = ["link1", "link2", "link3"];
+    const website = true;
+    return website ? (
+        <Frontpage />
+    ) : (
+        <>
+            <MainContainer>
+                {/* left bar */}
+                <NavigationBar links={links} />
+
+                {/* right panel bar */}
+                <div className="w-full bg-gray-900">
+                    {/* top bar */}
+                    <div className="w-full bg-gray-300 h-12"></div>
+                    {/* content */}
+                    <PageContainer links={links} />
+                </div>
+            </MainContainer>
+        </>
+    );
 }
 
 export default App;
