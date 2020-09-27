@@ -9,12 +9,12 @@ const Frontpage = ({ ...props }) => {
                 <div className="p-12 pt-2 pb-2 border-b-red-700 border-solid border-1 p-2">
                     Home
                 </div>
-                <div className="p-12 pt-2 pb-2 hover:bg-gray-700  cursor-pointer p-2">
+                {/* <div className="p-12 pt-2 pb-2 hover:bg-gray-700  cursor-pointer p-2">
                     About
                 </div>
                 <div className="mr-12 p-12 pb-2 pt-2 hover:bg-gray-700  cursor-pointer p-2">
                     Blog
-                </div>
+                </div> */}
             </div>
 
             {/* Body */}
@@ -187,7 +187,7 @@ const Frontpage = ({ ...props }) => {
 
                             <div className="md:w-1/3 m-4">
                                 <div className="text-xl text-white font-semibold uppercase">
-                                    Expermented with
+                                    Experimented with
                                 </div>
                                 <div>
                                     <ul className="list-disc ml-6 text-white mt-6 font-thin">
